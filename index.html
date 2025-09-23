@@ -15,14 +15,14 @@
 
         /* Hero Section */
         #bg-images {
-            background: url('images/bg-images.png') no-repeat center center/cover;
+            background: url('images/Dubai\ Diaries.png') no-repeat center center/cover;
             position: relative;
             border-radius: 12px;
             padding: 20px;
             /* Increased side padding for more space */
             text-align: center;
             color: #fff;
-            min-height: 100vh;
+            min-height: 450px;
             display: flex;
             top: 13px;
             flex-direction: column;
@@ -96,7 +96,33 @@
         }
 
         .font-checker {
-            font-family: Arial Helvetica sans-serif;
+          font-family: 'Pacifico', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Or use 'Roboto', sans-serif for a different style */
+            color: #FFA500;
+            /* Orange for "THIS" */
+            background: linear-gradient(90deg, #FFD700 50%, #f69116 50%);
+            /* Yellow for "DIWALI", Orange for "THIS" */
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #f69116;
+            }
+
+            /* Blue */
+            50% {
+                color: #ea3338;
+            }
+
+            /* Skyblue */
+            100% {
+                color: #ffd400;
+            }
+
+            /* Blue */
         }
     </style>
 </head>
@@ -117,8 +143,10 @@
                     <!-- Hero Section -->
                     <section id="bg-images" class="mx-auto">
                         <div class="header-content ">
-                            <h2 class="fw-bold font-checker text-uppercase">This Diwali Lock Your Fare Before Prices
-                                Rise!</h2>
+                            <h2 class="fw-bold font-checker text-uppercase">This Diwali
+                            </h2>
+                            <h4> Lock Your Fare Before Prices
+                                Rise!</h4>
                             <a href="#destinations" class="btn btn-warning btn-lg mt-3">Start Your Journey Today</a>
                         </div>
                     </section>
