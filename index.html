@@ -291,7 +291,12 @@
                             <!-- class="text-warning text-decoration-none">click here to unsubscribe</a>. -->
                     </p>
 
-                    <p class="text-muted small mt-2">©1997 - 2025 Zenith Holidays</p>
+                   <p class="text-white small mt-2">©1997-<span id="year"></span> Zenith Holidays</p>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
                 </footer>
             </div>
         </div>
