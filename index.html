@@ -13,9 +13,13 @@
             font-family: Arial, sans-serif;
         }
 
+        .container {
+            max-width: 1000px;
+        }
+
         /* Hero Section */
-        #bg-images {
-            background: url('images/Dubai\ Diaries.png') no-repeat center center/cover;
+        .bg-images {
+            /* background: url('images/Dubai\ Diaries.png') no-repeat center center/cover; */
             position: relative;
             border-radius: 12px;
             padding: 20px;
@@ -31,10 +35,11 @@
             margin-left: 2rem;
             /* Added side margin */
             margin-right: 2rem;
+            overflow: hidden;
             /* Added side margin */
         }
 
-        #bg-images::before {
+        .bg-images::before {
             content: '';
             position: absolute;
             top: 0;
@@ -47,7 +52,7 @@
             z-index: 1;
         }
 
-        #bg-images .header-content {
+        .bg-images .header-content {
             position: relative;
             z-index: 2;
         }
@@ -58,9 +63,9 @@
         }
 
         .destination-image img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+            width: 300px;
+            height: auto;
+            overflow: hidden;
         }
 
         main {
@@ -73,17 +78,17 @@
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            #bg-images {
+            .bg-images {
                 padding: 1.5rem 2rem;
                 /* Reduced side padding for smaller screens */
                 margin-left: 1rem;
                 /* Adjusted side margin */
                 margin-right: 1rem;
                 /* Adjusted side margin */
-                min-height: 300px;
+                overflow: hidden;
             }
 
-            #bg-images h2 {
+            .bg-images h2 {
                 font-size: 1.5rem;
             }
 
@@ -125,6 +130,12 @@
 
             /* Blue */
         }
+
+        .travel img {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
     </style>
 </head>
 
@@ -135,14 +146,15 @@
                 <!-- Logo -->
                 <div class="text-center mb-1 p-2"> <!-- Added side padding -->
                     <img src="images/holiday-logo.png" alt="Zenith Holidays Logo" class="img-fluid"
-                        style="max-width: 115px;">
+                        style="width: 115px; text-align: center; margin: auto;">
                     <!-- <img src="images/holiday-logo-animated.gif" alt="Zenith Holidays Logo" class="img-fluid"
                         style="max-width: 150px;"> -->
                 </div>
 
                 <main>
                     <!-- Hero Section -->
-                    <section id="bg-images" class="mx-auto">
+                    <section class="mx-auto bg-images"
+                        style="background: url('images/bg-dubai.png') no-repeat center center/cover">
                         <div class="header-content ">
                             <h2 class="fw-bold font-checker text-uppercase">This Diwali
                             </h2>
@@ -152,7 +164,7 @@
                                 class="btn btn-warning btn-lg mt-3">Start Your Journey Today</a>
                         </div>
                     </section>
-                    <section class="travel">
+                    <section class="travel" style="overflow: hidden;">
                         <div class="container">
                             <h3 class="text-center fw-bold  text-white px-4 mt-5"> <!-- Added side padding -->
                                 Travel More With Special Deals
@@ -161,7 +173,7 @@
                                 <div class="col-md-12 ">
 
                                     <a href="https://www.zenithholidays.com/flights" target="_blank">
-                                        <img src="images/Flight.png" width="100%" alt="not found">
+                                        <img src="images/fli.png" width="100%" alt="not found">
                                     </a>
                                 </div>
                                 <div class="col-md-12 text-center py-3">
@@ -183,7 +195,7 @@
                         </div>
                     </section>
 
-                    <section id="holiday-packages">
+                    <section id="holiday-packages" style="overflow: hidden;">
                         <div class="container pb-2">
                             <h3 class="text-center fw-bold mb-4 text-white px-4 mt-3">
                                 Start Your Journey Today
@@ -195,7 +207,7 @@
                                     <div class="package-card shadow-sm border-0 h-100">
                                         <a
                                             href="https://www.zenithholidays.com/holiday/details?id=660e9d059f903d192ec7991e&currency=INR">
-                                            <img src="images/Serene Kerala with Kanyakumari.png" class="package-img"
+                                            <img src="images/Kanyakumari.png" class="package-img"
                                                 alt="Serene Kerala with Kanyakumari">
                                         </a>
                                         <div class="package-body">
@@ -209,7 +221,8 @@
                                             <div
                                                 class="package-footer d-flex justify-content-between align-items-center">
                                                 <p class="fw-bold text-primary fs-5 mb-0">₹26,590/-</p>
-                                                <a href="book-kerala.html" class="btn btn-warning">Book Now</a>
+                                                <a href="https://www.zenithholidays.com/holiday/details?id=660e9d059f903d192ec7991e&currency=INR"
+                                                    class="btn btn-warning">Book Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -220,7 +233,7 @@
                                     <div class="package-card shadow-sm border-0 h-100">
                                         <a
                                             href="https://www.zenithholidays.com/holiday/details?id=6877337ab159dc54ada2a40c&currency=INR">
-                                            <img src="images/Beautiful Krabi, Phuket & Bangkok.png" class="package-img"
+                                            <img src="images/Bangkok.png" class="package-img"
                                                 alt="Beautiful Krabi, Phuket & Bangkok">
                                         </a>
                                         <div class="package-body">
@@ -234,7 +247,8 @@
                                             <div
                                                 class="package-footer d-flex justify-content-between align-items-center">
                                                 <p class="fw-bold text-primary fs-5 mb-0">₹36,990/-</p>
-                                                <a href="book-krabi.html" class="btn btn-warning">Book Now</a>
+                                                <a href="https://www.zenithholidays.com/holiday/details?id=6877337ab159dc54ada2a40c&currency=INR"
+                                                    class="btn btn-warning">Book Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -245,7 +259,7 @@
                                     <div class="package-card shadow-sm border-0 h-100">
                                         <a
                                             href="https://www.zenithholidays.com/holiday/details?id=68760d6ab159dc54ada2917c&currency=INR">
-                                            <img src="images/Island Escapade _ Sri Lanka.png" class="package-img"
+                                            <img src="images/SriLanka.png" class="package-img"
                                                 alt="Island Escapade : Sri Lanka">
                                         </a>
                                         <div class="package-body">
@@ -259,7 +273,8 @@
                                             <div
                                                 class="package-footer d-flex justify-content-between align-items-center">
                                                 <p class="fw-bold text-primary fs-5 mb-0">₹40,990/-</p>
-                                                <a href="book-sri-lanka.html" class="btn btn-warning">Book Now</a>
+                                                <a href="https://www.zenithholidays.com/holiday/details?id=68760d6ab159dc54ada2917c&currency=INR"
+                                                    class="btn btn-warning">Book Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -270,7 +285,7 @@
                                     <div class="package-card shadow-sm border-0 h-100">
                                         <a
                                             href="https://www.zenithholidays.com/holiday/details?id=687644d3b159dc54ada29e1a&currency=INR">
-                                            <img src="images/Soulful Bali.png" class="package-img" alt="Soulful Bali">
+                                            <img src="images/Bali.png" class="package-img" alt="Soulful Bali">
                                         </a>
                                         <div class="package-body">
                                             <h5 class="package-title fw-bold">
@@ -283,7 +298,8 @@
                                             <div
                                                 class="package-footer d-flex justify-content-between align-items-center">
                                                 <p class="fw-bold text-primary fs-5 mb-0">₹43,990/-</p>
-                                                <a href="book-bali.html" class="btn btn-warning">Book Now</a>
+                                                <a href="https://www.zenithholidays.com/holiday/details?id=687644d3b159dc54ada29e1a&currency=INR"
+                                                    class="btn btn-warning">Book Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -294,7 +310,7 @@
                                     <div class="package-card shadow-sm border-0 h-100">
                                         <a
                                             href="https://www.zenithholidays.com/holiday/details?id=68774280b159dc54ada2a81e&currency=INR">
-                                            <img src="images/Dubai Diaries.png" class="package-img" alt="Dubai Delight">
+                                            <img src="images/Dubai.png" class="package-img" alt="Dubai Delight">
                                         </a>
                                         <div class="package-body">
                                             <h5 class="package-title fw-bold">
@@ -307,7 +323,8 @@
                                             <div
                                                 class="package-footer d-flex justify-content-between align-items-center">
                                                 <p class="fw-bold text-primary fs-5 mb-0">₹53,990/-</p>
-                                                <a href="book-dubai.html" class="btn btn-warning">Book Now</a>
+                                                <a href="https://www.zenithholidays.com/holiday/details?id=68774280b159dc54ada2a81e&currency=INR"
+                                                    class="btn btn-warning">Book Now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -382,57 +399,14 @@
                         }
                     </style>
 
-                    <!-- <section id="desti ">
-                        <div class="container pb-2">
-                            <h3 class="text-center fw-bold mb-4 text-white px-4 mt-3">
-                                Start Your Journey Today
-                            </h3>
-                            <div class="row" id="destinations">
-                                
-                                <div class="col-md-6 px-4"> 
-                                    <div class="card shadow-sm border-0 h-100">
-                                        <div class="destination-image">
-                                            <img src="images/Burj_Khalifa.png" class="card-img-top"
-                                                alt="Burj Khalifa in Dubai">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">Dubai</h5>
-                                            <p class="card-text text-muted">Lights, luxury, and laughter: Diwali in
-                                                Dubai
-                                                awaits.</p>
-                                            <p class="fw-bold text-primary fs-5">From ₹35,312*</p>
-                                            <button class="btn btn-warning w-100">Book Now</button>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                
-                                <div class="col-md-6 px-4"> 
-                                    <div class="card shadow-sm border-0 h-100">
-                                        <div class="destination-image">
-                                            <img src="images/Discover_Dubai.png" class="card-img-top"
-                                                alt="Discover Dubai cityscape">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title fw-bold">Discover Dubai</h5>
-                                            <p class="card-text text-muted">Celebrate the lights with unforgettable
-                                                cityscapes &
-                                                thrills.</p>
-                                            <p class="fw-bold text-primary fs-5">From ₹72,124*</p>
-                                            <button class="btn btn-warning w-100">Book Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section> -->
-                    <section id="offers">
+                    <section id="offers" style="overflow: hidden;">
                         <div class="container py-3">
                             <div class="row">
 
                                 <div class="col-md-12 ">
                                     <a href="https://www.zenithholidays.com/hotels" target="_blank">
-                                        <img src="images/hotel.png" width="100%" alt="not found">
+                                        <img src="images/hot.png" width="100%" alt="not found">
                                     </a>
                                 </div>
                             </div>
